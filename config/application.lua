@@ -1,5 +1,5 @@
 local Appconf={}
-Appconf.name = 'a'
+Appconf.name = 'idevz.org'
 
 Appconf.route='vanilla.v.routes.simple'
 Appconf.bootstrap='application.bootstrap'
