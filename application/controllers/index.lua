@@ -12,6 +12,7 @@ function IndexController:index()
 end
 
 function IndexController:info()
+	ngx.say('=============')
 	local zsh_dict = ngx.shared.zhou
 	local key = '_zsh_dict'
 	local p = {}
