@@ -17,6 +17,7 @@ function AdminPlugin:routerStartup(request, response)
 			rs = ngx.location.capture("/index.php?" .. request.req_uri)
 			if rs then zsh_dict:set(key, json.encode(rs)) end
 		end
+		-- pp(rs)
 		response:setStatus(rs.status)
 		rs.header['cache_status'] = cache_status
 		response:setHeaders(rs.header)
@@ -40,6 +41,7 @@ function AdminPlugin:postDispatch(request, response)
 end
 
 function AdminPlugin:dispatchLoopShutdown(request, response)
+	-- pp('AdminPlugin:dispatchLoopShutdown')
 end
 
 return AdminPlugin

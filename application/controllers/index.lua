@@ -11,6 +11,17 @@ function IndexController:index()
     return view:display()
 end
 
+function IndexController:helloworld()
+	return 'helloworld'
+end
+
+function IndexController:home()
+	pp('IndexController:home')
+	pp(ngx.req.get_uri_args()['ddd'])
+	-- https://github.com/idevz/vanilla/issues/new?title={idevz/vanilla}
+	return  ngx.var.request_uri
+end
+
 function IndexController:info()
 	ngx.say('=============')
 	local zsh_dict = ngx.shared.zhou
