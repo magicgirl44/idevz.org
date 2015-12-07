@@ -7,8 +7,9 @@ function IndexController:index()
     local p = {}
     p['vanilla'] = 'Welcome To Vanilla...'
     p['zhoujing'] = 'Power by Openresty'
-    view:assign(p)
-    return view:display()
+    return sprint_r(p)
+    -- view:assign(p)
+    -- return view:display()
 end
 
 function IndexController:helloworld()

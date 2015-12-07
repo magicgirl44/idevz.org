@@ -29,7 +29,7 @@ function Bootstrap:boot_list()
         Bootstrap.initErrorHandle,
         Bootstrap.initRoute,
         Bootstrap.initView,
-        Bootstrap.initPlugin,
+        -- Bootstrap.initPlugin,
     }
 end
 
