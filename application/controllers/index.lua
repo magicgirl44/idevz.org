@@ -7,12 +7,17 @@ function IndexController:index()
     local p = {}
     p['vanilla'] = 'Welcome To Vanilla...'
     p['zhoujing'] = 'Power by Openresty'
-    return sprint_r(p)
+    -- return sprint_r(p)
+    local req = self:getRequest()
+    print_r(req)
+    return '00'
     -- view:assign(p)
     -- return view:display()
 end
 
 function IndexController:helloworld()
+    local req = self:getRequest()
+    print_r(req)
 	return 'helloworld'
 end
 
