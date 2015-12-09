@@ -17,7 +17,6 @@ end
 
 function IndexController:helloworld()
     local req = self:getRequest()
-    print_r(req)
 	return 'helloworld'
 end
 
